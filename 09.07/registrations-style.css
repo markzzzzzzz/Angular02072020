@@ -1,0 +1,15 @@
+.inactive {
+    color: red;
+}
+
+.inactive:hover {
+    cursor: pointer;
+}
+
+.inactive {
+    text-decoration: line-through;
+}
+
+#coffee {
+    color:blue
+}
