@@ -1,0 +1,9 @@
+#main-picture {
+    height: 500px;
+    width: auto;
+    background-image: url("src\assets\c1_1746699_190910111453.jpg"); 
+    background-size: 100%;
+    margin: 0 10%;
+    border-radius: 10px;
+    background-position: 0 20%;
+}
