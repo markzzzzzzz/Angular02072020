@@ -1,0 +1,19 @@
+<div class="form">
+    <h3>Sisesta oma kontaktandmed:</h3>
+    <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+        <label >Sisesta eesnimi:</label><br>
+        <input class="form-control" ngModel name="firstname" type="text" id="firstname" pattern="^[A-Za-z]+$" placeholder="Eesnimi" required><br>
+        <label >Sisesta perekonnanimi:</label><br>
+        <input class="form-control" ngModel name="lastname" type="text" id="lastname" placeholder="Perekonnanimi" required><br>
+        <label >Sisesta telefoninumber:</label><br>
+        <input class="form-control" ngModel name="phone" type="tel" id="phone" placeholder="Telefoninumber" required><br>
+        <label >Sisesta email:</label><br>
+        <input class="form-control" ngModel name="email" type="email" id="email" placeholder="E-mail" required><br>
+        <br>
+        <input class="btn btn-secondary" type="submit" value="Sisesta">
+        </form> 
+
+    <br><br><br><br>
+    <div id="registrations"></div>
+
+</div>
