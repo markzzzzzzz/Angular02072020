@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-item',
+  templateUrl: './item.component.html',
+  styleUrls: ['./item.component.css']
 })
-export class AppComponent {
+export class ItemComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  
   catsArray: {breed: string, name: string, picture: string}[] = [];
   titleText = 'forms';
   number: number;
@@ -19,6 +26,7 @@ export class AppComponent {
 
     var cat = form.value;
     this.catsArray.push(cat)
+    form.reset();
   }
 
   onGenerate() {
@@ -26,10 +34,13 @@ export class AppComponent {
     this.randomNumbers.push(this.number);
   }
 
+  onDeleteCat(i) {
+    this.catsArray.splice(i,1);
+  }
+
   onDelete(i) {
     this.randomNumbers.splice(i,1);
   }
 
+
 }
-
-

@@ -5,10 +5,20 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ItemViewComponent } from './item-view/item-view.component';
+import { ItemComponent } from './item/item.component';
+import { ShortenPipe } from './item-view/shorten.pipe';
+import { NumberViewComponent } from './number-view/number-view.component';
+import { DoublePipe } from './number-view/double.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ItemViewComponent,
+    ItemComponent,
+    ShortenPipe,
+    NumberViewComponent,
+    DoublePipe
   ],
   imports: [
     BrowserModule,
