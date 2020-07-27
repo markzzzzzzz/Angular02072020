@@ -1,0 +1,30 @@
+<form #carInputForm="ngForm" (ngSubmit)="onSubmitForm(carInputForm)">
+  <label>Auto mark:</label><br>
+  <input ngModel name="brand" type="text"><br>
+  <label>Auto mudel:</label><br>
+  <input ngModel name="model" type="text"><br>
+  <label>Auto aasta:</label><br>
+  <input ngModel name="year" type="text"><br>
+  <label>Auto pilt:</label><br>
+  <input ngModel name="picture" type="url"><br><br>
+  
+  <button type="submit" class="btn btn-secondary">Sisesta</button>
+</form>
+
+
+  <br><br><br>
+  
+
+  <div *ngIf="carsArray.length == 0"> <i> Autosi pole lisatud </i></div>
+  
+    <div *ngFor="let car of carsArray; let i = index">
+      {{i+1}}. Auto:
+      <b> {{ car.brand }}: </b>
+      {{ car.model }} <br>
+      {{ car.year }} <br>
+     <img src="{{ car.picture }}" class="picture">
+     <button (click)="onDeleteCars(i)">X</button>
+ 
+
+ 
+  
