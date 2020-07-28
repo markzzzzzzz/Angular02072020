@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +10,9 @@ import { ItemComponent } from './item/item.component';
 import { ShortenPipe } from './item-view/shorten.pipe';
 import { NumberViewComponent } from './number-view/number-view.component';
 import { DoublePipe } from './number-view/double.pipe';
+import { MainComponent } from './main/main.component';
+import { ComputerComponent } from './computer/computer.component';
+import { ComputerEditComponent } from './computer/computer-edit/computer-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,16 @@ import { DoublePipe } from './number-view/double.pipe';
     ItemComponent,
     ShortenPipe,
     NumberViewComponent,
-    DoublePipe
+    DoublePipe,
+    MainComponent,
+    ComputerComponent,
+    ComputerEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
