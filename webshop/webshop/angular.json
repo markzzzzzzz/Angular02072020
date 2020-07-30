@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "cars": {
+    "webshop": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/cars",
+            "outputPath": "dist/webshop",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cars:build"
+            "browserTarget": "webshop:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "cars:build:production"
+              "browserTarget": "webshop:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "cars:build"
+            "browserTarget": "webshop:build"
           }
         },
         "test": {
@@ -87,15 +87,10 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [   
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "styles.css"
+            "styles": [
+              "src/styles.css"
             ],
-            "scripts": [  
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           }
         },
         "lint": {
@@ -115,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "cars:serve"
+            "devServerTarget": "webshop:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "cars:serve:production"
+              "devServerTarget": "webshop:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "cars"
+  "defaultProject": "webshop"
 }
