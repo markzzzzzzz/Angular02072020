@@ -4,7 +4,9 @@
   max-width: 1000px;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 200px;
+  margin: 0 auto;
+  margin-top: 300px !important;
+  margin-bottom: 200px;
 }
 
 .item {
@@ -21,6 +23,7 @@
   transition: .5s all;
   box-shadow: 0 8px 17px 0 rgba(212, 29, 70, 0.05), 
   0 6px 10px 0 rgba(0,0,0,.15);
+  background-color: lightgray;
 }
 
 .item:hover img {

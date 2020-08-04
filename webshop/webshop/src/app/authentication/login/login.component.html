@@ -1,1 +1,37 @@
-<p>login works!</p>
+<br><br><br><br><br>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Login </h2>
+    <h2 class="inactive underlineHover" routerLink="/signup">Sign up </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="\assets\585e4bf3cb11b227491c339a.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <input 
+      type="text" 
+      id="login" 
+      class="fadeIn second" 
+      name="login" 
+      placeholder="Username/E-mail">
+      <input
+      type="password" 
+      id="password" 
+      class="fadeIn third" 
+      ngModel
+      name="password" 
+      placeholder="Password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
