@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { SignupComponent } from './authentication/signup/signup.component';
 import { NotFoundComponent } from './global/not-found/not-found.component';
 import { HeaderComponent } from './global/menu/header/header.component';
 import { ItemNewComponent } from './item-new/item-new.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,9 @@ import { ItemNewComponent } from './item-new/item-new.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

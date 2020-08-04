@@ -11,12 +11,39 @@
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input type="text" id="Username" class="fadeIn second" name="Username" placeholder="Username">
-      <input type="text" id="password" class="fadeIn third" name="signup_password" placeholder="Password">
-      <input type="text" id="passwordrepeat" class="fadeIn third" name="signup_password repeat" placeholder="Repeat password">
-      <input type="text" id="email" class="fadeIn third" name="email" placeholder="Email">
-      <input type="submit" class="fadeIn fifth" value="Sign Up">
+    <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+      <input 
+        type="text" 
+        id="Username" 
+        class="fadeIn second" 
+        ngModel
+        name="Username" 
+        placeholder="Username">
+      <input 
+        type="password" 
+        id="password" 
+        class="fadeIn third" 
+        ngModel
+        name="signup_password" 
+        placeholder="Password">
+      <input
+        type="password" 
+        id="passwordrepeat" 
+        class="fadeIn fourth" 
+        ngModel
+        name="signup_password repeat" 
+        placeholder="Repeat password">
+      <input
+        type="text" 
+        id="email" 
+        class="fadeIn fourth" 
+        ngModel
+        name="email" 
+        placeholder="Email">
+      <input
+        type="submit" 
+        class="fadeIn fifth" 
+        value="Sign Up">
     </form>
 
     <!-- Remind Passowrd -->
