@@ -18,6 +18,9 @@ import { NotFoundComponent } from './global/not-found/not-found.component';
 import { HeaderComponent } from './global/menu/header/header.component';
 import { ItemNewComponent } from './item-new/item-new.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UniquePipe } from './item/item-list/unique.pipe';
+import { CategoryFilterPipe } from './item/item-list/category-filter.pipe';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SignupComponent,
     NotFoundComponent,
     HeaderComponent,
-    ItemNewComponent
+    ItemNewComponent,
+    UniquePipe,
+    CategoryFilterPipe,
+    CartComponent
   ],
   imports: [
     BrowserModule,

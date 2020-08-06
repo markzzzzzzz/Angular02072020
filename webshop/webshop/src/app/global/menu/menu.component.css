@@ -1,14 +1,9 @@
 .menu {
   background-color: #CEEAF7;
-  height: 100px;
-  top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
-  position: fixed;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 100px;
+  box-shadow: 2px 2px 2px 2px rgb(0, 0, 0.2);
 }
 
 .menu img {
