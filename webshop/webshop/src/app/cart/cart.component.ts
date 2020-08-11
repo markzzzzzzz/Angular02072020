@@ -9,17 +9,32 @@ import { Item } from '../item/item.model';
 })
 export class CartComponent implements OnInit {
   itemsInCart: Item[];
-
+  sumOfCart: number;
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.itemsInCart = this.cartService.getItems();
+    this.getItemsFromService();
+    this.getCartSum()
+  }
+
+  getItemsFromService(): void {
+    let itemsFromService = this.cartService.getItems();
+    this.itemsInCart = itemsFromService.map(item =>({...item, price: item.price.
+    split("$")[2] ? item.price.split("$")[2] : item.price.split("$")[1] }));
   }
 
   onRemoveFromCart(i: number) {
     //this.itemsInCart.splice(i, 1);
     this.cartService.removeItem(i);
-    this.itemsInCart = this.cartService.getItems();
+    this.getItemsFromService();
+    this.getCartSum();
+  }
+
+  getCartSum() {
+    this.sumOfCart = 0
+    this.itemsInCart.forEach(item => {
+      this.sumOfCart += (Number)(item.price);
+    });
   }
 
   onEmptyCart() {
