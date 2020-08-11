@@ -3,6 +3,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { ItemService } from '../item.service';
 import { Item } from '../item.model';
 import { CartService } from '../../cart/cart.service';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-item-view',
@@ -15,7 +16,8 @@ export class ItemViewComponent implements OnInit {
   constructor(
     private itemService: ItemService, 
     private route: ActivatedRoute,
-    private cartService: CartService) { }
+    private cartService: CartService,
+    private toastService: ToastService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params)=>{
@@ -26,6 +28,7 @@ export class ItemViewComponent implements OnInit {
 
   onAddToCart() {
     this.cartService.addItem(this.item);
+    this.toastService.success('Added to cart');
   }
 
 }

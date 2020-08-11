@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from './cart.service';
 import { Item } from '../item/item.model';
+import { ToastService } from 'angular-toastify';
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +11,8 @@ import { Item } from '../item/item.model';
 export class CartComponent implements OnInit {
   itemsInCart: Item[];
   sumOfCart: number;
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private toastService: ToastService) { }
 
   ngOnInit(): void {
     this.getItemsFromService();
@@ -28,6 +30,7 @@ export class CartComponent implements OnInit {
     this.cartService.removeItem(i);
     this.getItemsFromService();
     this.getCartSum();
+    this.toastService.info('Removed from cart');
   }
 
   getCartSum() {
@@ -35,10 +38,13 @@ export class CartComponent implements OnInit {
     this.itemsInCart.forEach(item => {
       this.sumOfCart += (Number)(item.price);
     });
+      this.sumOfCart = (Number)(this.sumOfCart.toFixed(2));
+  
   }
 
   onEmptyCart() {
     this.cartService.removeItems();
     this.itemsInCart = this.cartService.getItems();
+    this.toastService.error('Removed all items from cart');
   }
 }

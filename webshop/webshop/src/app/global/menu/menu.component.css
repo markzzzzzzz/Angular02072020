@@ -15,3 +15,13 @@
 .menu-link {
   margin: 20px;
 }
+
+.cartItemsCount {
+ border-radius: 50%;
+ height: 20px;
+ width: 20px;
+ background-color: moccasin; 
+ padding: 0 3px;
+ margin: 30 0 -50px 0 !important;
+
+}

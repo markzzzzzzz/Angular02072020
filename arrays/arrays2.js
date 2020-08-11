@@ -26,5 +26,5 @@ var people = [
   {nimi: "Gustav", age: 65},
 ];
 
-ageArray = people.map(human => ({name: human.name => age: 2020-human.age}));
+ageArray = people.map(human => ({name: human.name, age: 2020-human.age}));
 console.log(ageArray);
