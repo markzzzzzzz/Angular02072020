@@ -1,6 +1,7 @@
 .menu {
   background-color: #CEEAF7;
   z-index: 100;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   box-shadow: 2px 2px 2px 2px rgb(0, 0, 0.2);

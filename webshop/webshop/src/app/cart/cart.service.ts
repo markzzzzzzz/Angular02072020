@@ -30,5 +30,4 @@ export class CartService {
     this.itemsInCart.splice(0, this.itemsInCart.length);
     this.cartChanged.next(this.itemsInCart.slice());
   }
-
 }

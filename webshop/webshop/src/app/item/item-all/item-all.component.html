@@ -14,5 +14,6 @@
   class="item" [class.inactive]="!item.visible" (click)="onInactive(i)">
   <p> {{ item.title }} </p>
   <p>  {{ item.price }} </p> 
+  <button [routerLink]='["/edit",i]'>{{'Edit' }}</button>
   </div>
 </div>

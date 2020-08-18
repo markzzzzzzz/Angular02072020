@@ -33,4 +33,9 @@ export class ItemService {
     this.items[i]["visible"] = !this.items[i]["visible"]
     console.log(this.items[i])
   }
+
+  updateItem(i: number, newItem: Item) {
+    this.items[i] = newItem;
+  }
+
 }
