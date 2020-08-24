@@ -1,0 +1,9 @@
+<form [formControl]="projectEditForm" (ngSubmit)=onSubmit(projectEditForm)>
+    <label>{{'Name'}}</label><br>
+    <input formControlName="name" type="text"><br>
+    <label>{{'Description'}}</label><br>
+    <input formControlName="description" type="text"><br>
+    <label>{{'Deadline'}}</label><br>
+    <input formControlName="deadline" type="text"><br>
+    <button>Sisesta </button>
+</form>
