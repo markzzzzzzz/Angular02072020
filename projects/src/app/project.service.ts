@@ -13,6 +13,7 @@ export class ProjectService {
     {name:'Wonder Woman', description:'Fantasy', deadline: '02.10', picture: 'https://m.media-amazon.com/images/M/MV5BZGVhZDBlZjgtMGNmNi00OTIyLWI1NzQtMzE5ZWQ0NzFmMjg0XkEyXkFqcGdeQXVyMTA2OTQ3MTUy._V1_UY209_CR0,0,140,209_AL_.jpg', active: true},
     {name:'Connected', description:'Comedy', deadline: '23.10', picture: 'https://m.media-amazon.com/images/M/MV5BNjE0ZGQyZDAtMmZmOS00MGI3LTgyZWEtM2VhZTQxZDM2Mjk3XkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_UX140_CR0,0,140,209_AL_.jpg', active: true},
   ]
+
  
   constructor() { }
 
@@ -28,9 +29,6 @@ export class ProjectService {
     this.Projects[i] = project;
   }
 
-  onSubmit(form: FormGroup){
-    this.projectService.updateProject(form.value,this.id)
-  }
 
 }
 

@@ -12,26 +12,26 @@ import { ProjectService } from '../project.service';
 export class ProjectEditComponent implements OnInit {
   projectEditForm: FormGroup
   project;
-  id;
+  id: number;
+ 
 
   constructor(private route: ActivatedRoute, private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe((params: Params) => {
-    this.id=params["id"]})
-    this.project=this.projectService.getProject(this.id)
-    console.log(this.project)
-  }
-
-  onSubmit(){}
-
-  initForm() {
-    this.projectEditForm = new FormGroup({
-      name: new FormControl(this.id.name),
-      description: new FormControl(this.id.description),
-      deadline: new FormControl(this.id.deadline),
+    this.route.params.subscribe((params) => {
+      this.id = params['id']
   })
 
+  this.projectEditForm = new FormGroup({
+    name: new FormControl(this.project.name),
+    description: new FormControl(this.project.description),
+    deadline: new FormControl(this.project.deadline),
+  })
 }
+  onSubmit(form: FormGroup){
+    this.projectService.updateProject(form.value, this.id)
+  }
 
 }
+
+
