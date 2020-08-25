@@ -19,6 +19,7 @@
 }
 
 .item:hover {
+  cursor: pointer;
   transition: .5s all;
   box-shadow: 0 8px 17px 0 rgba(212, 29, 70, 0.05), 
   0 6px 10px 0 rgba(0,0,0,.15);
@@ -40,4 +41,14 @@
 .item p {
   padding: 15px;
 
+}
+
+.dropdown {
+  display: table;
+  margin: 0 auto !important;
+}
+
+.items-sort {
+  display: flex;
+  justify-content: space-around;
 }

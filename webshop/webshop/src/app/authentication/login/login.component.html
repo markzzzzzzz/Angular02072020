@@ -2,8 +2,8 @@
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <!-- Tabs Titles -->
-    <h2 class="active"> Login </h2>
-    <h2 class="inactive underlineHover" routerLink="/signup">Sign up </h2>
+    <h2 class="active"> {{'Login' | translate}} </h2>
+    <h2 class="inactive underlineHover" routerLink="/signup">{{'Sign up' | translate}} </h2>
 
     <!-- Icon -->
     <div class="fadeIn first">
@@ -18,20 +18,20 @@
         class="fadeIn second" 
         ngModel
         name="login" 
-        placeholder="Username/E-mail">
+        placeholder="{{'Username/E-mail' | translate}}">
       <input
         type="password" 
         id="password" 
         class="fadeIn third" 
         ngModel
         name="password" 
-        placeholder="Password">
+        placeholder="{{'Password' | translate}}">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
 
     <!-- Remind Passowrd -->
     <div id="formFooter">
-      <a class="underlineHover" href="#">Forgot Password?</a>
+      <a class="underlineHover" href="#">{{'Forgot Password?' | translate}}</a>
     </div>
 
   </div>

@@ -8,6 +8,7 @@
   </mat-select>
 </mat-form-field>
 
+<button (click)="onSendToDb()">Send all items to Database</button>
 
 <div class="adminitems-list">
   <div *ngFor="let item of items | categoryFilter: selectedCategory; let i = index"

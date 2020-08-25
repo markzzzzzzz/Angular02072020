@@ -1,7 +1,18 @@
 {
   "Add items": "Lisa esemeid",
   "View items": "Vaata esemeid",
-  "Webshop": "Veebipood"
+  "Webshop": "Veebipood",
+  "Item added": "Toode lisatud",
+  "Select item category": "Vali kategooria",
+  "Order by": "Filtreeri",
+  "Login": "Logi sisse",
+  "Sign up": "Registreeri",
+  "Login/Signup": "Logi sisse/Registreeri",
+  "Cart": "Ostukorv",
+  "Username/E-mail": "Kasutajanimi/E-mail",
+  "Password": "Parool",
+  "Forgot Password?": "Unustasid parooli?"
+
 
 
 

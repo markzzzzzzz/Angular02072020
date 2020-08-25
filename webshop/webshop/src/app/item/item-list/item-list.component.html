@@ -1,17 +1,32 @@
-<mat-form-field appearance="fill">
-  <mat-label>Select item category</mat-label>
-  <mat-select [(ngModel)]="selectedCategory">
-    <mat-option value="">All items</mat-option>
-    <mat-option *ngFor="let item of items | unique" [value]="item.category">
-      {{item.category}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+<div class="items-sort">
+  <mat-form-field appearance="fill">
+    <mat-label>{{'Select item category' | translate}}</mat-label>
+    <mat-select [(ngModel)]="selectedCategory">
+      <mat-option value="">All items</mat-option>
+      <mat-option *ngFor="let item of items | unique" [value]="item.category">
+        {{item.category}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>{{'Order by' | translate}}</mat-label>
+    <mat-select>
+      <mat-option value="" (click)="onSortAll()">All items</mat-option>
+      <mat-option value="" (click)="onSortPriceAsc()">Price - highest first</mat-option>
+      <mat-option value="" (click)="onSortPriceDesc()">Price - lowest first</mat-option>
+      <mat-option value="" (click)="onSortTitleAsc()">Title - A to Z</mat-option>
+      <mat-option value="" (click)="onSortTitleDesc()">Title - Z to A</mat-option>
+      
+      
+    </mat-select>
+  </mat-form-field>
+</div>
 
 
 <div class="items-list">
   <div
-    *ngFor="let item of items | categoryFilter: selectedCategory; 
+    *ngFor="let item of itemsShown | categoryFilter: selectedCategory; 
       let i = index" 
     class="item" 
     [routerLink]="['view',i]">

@@ -2,11 +2,11 @@
   <img src="assets\background.jpg" routerLink="/">
   <app-header></app-header>
   <div>
-      <div class="menu-link-login" routerLink="login">Login/Signup</div>
+      <div class="menu-link-login" routerLink="login">{{'Login/Signup' | translate}}</div>
       <div class="menu-link-cart" routerLink="cart">
         <img src="assets\shopping-cart.png" id="icon" alt="Cart Icon" />
         <span *ngIf="cartItemsCount > 0" class="cartItemsCount">{{ cartItemsCount }}</span>
-        Cart
+        {{'Cart' | translate}}
       </div>
   </div>
 </div>

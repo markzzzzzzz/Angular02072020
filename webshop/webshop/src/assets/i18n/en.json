@@ -1,5 +1,14 @@
 {
   "Add items": "Add items",
   "View items": "View items",
-  "Webshop": "Webshop"
+  "Webshop": "Webshop",
+  "Item added": "Item added",
+  "Login": "Login",
+  "Sign up": "Sign up",
+  "Login/Signup": "Login/Signup",
+  "Cart": "Cart",
+  "Username/E-mail": "Username/E-mail",
+  "Password": "Password",
+  "Forgot Password?": "Forgot Password?"
+  
 }
