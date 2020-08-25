@@ -20,14 +20,19 @@ export class ProjectEditComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.id = params['id']
-  })
-
-  this.projectEditForm = new FormGroup({
-    name: new FormControl(this.project.name),
-    description: new FormControl(this.project.description),
-    deadline: new FormControl(this.project.deadline),
-  })
-}
+    })
+    this.project = this.projectService.getProject(this.id) 
+    this.initForm()
+  }
+  
+  initForm() {
+    this.projectEditForm = new FormGroup({
+      name: new FormControl(this.project.name),
+      description: new FormControl(this.project.description),
+      deadline: new FormControl(this.project.deadline),
+      picture: new FormControl(this.project.picture),
+    })
+  }
   onSubmit(form: FormGroup){
     this.projectService.updateProject(form.value, this.id)
   }
