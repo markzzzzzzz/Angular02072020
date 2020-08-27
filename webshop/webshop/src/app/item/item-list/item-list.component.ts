@@ -7,19 +7,22 @@ import { Item } from '../item.model';
   styleUrls: ['./item-list.component.css']
 })
 export class ItemListComponent implements OnInit {
-  items: Item[];
+  items: Item[] = [];
   selectedCategory: string;
-  itemsShown: Item[];
+  itemsShown: Item[] = [];
 
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
-    this.items = this.itemService.getItems();
-    this.onSortAll();
-    console.log(this.items);
-  }
+    this.itemService.fetchItems().subscribe(response => {
+    this.items = response;
+    this.onShowAll();
+    });
+    }
+  
+  	
 
-  onSortAll() {
+  onShowAll() {
     this.itemsShown = this.items;
   }
 

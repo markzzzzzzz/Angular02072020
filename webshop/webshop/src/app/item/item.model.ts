@@ -4,6 +4,7 @@ export class Item {
     public title: string,
     public price: string,
     public category: string,
+    public visible: boolean,
     public firebaseId?: string
   ) {}
 }

@@ -47,9 +47,19 @@ export class ItemEditComponent implements OnInit {
     // console.log(form.value);
     // console.log(form.value.title)
     // console.log(form.value["price"]);
-    this.itemService.updateItem(this.id, form.value);
     // this.router.navigateByUrl("/item/viewall")
+  
+
+    let updatedItem = new Item(
+      form.value.imgSrc,
+      form.value.title,
+      form.value.price,
+      form.value.category,
+      true
+    )
+
     this.toastService.success(this.translate.instant('Item changed'));
+    this.itemService.updateItem(this.id, updatedItem);
 
     setTimeout(()=>{
       this.router.navigateByUrl("/item/viewall");
