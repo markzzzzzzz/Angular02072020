@@ -5,8 +5,12 @@
       <div class="menu-link-login" routerLink="login">{{'Login/Signup' | translate}}</div>
       <div class="menu-link-cart" routerLink="cart">
         <img src="assets\shopping-cart.png" id="icon" alt="Cart Icon" />
-        <span *ngIf="cartItemsCount > 0" class="cartItemsCount">{{ cartItemsCount }}</span>
+        <span *ngIf="cartItemsCount > 0" class="cart-items-count">{{ cartItemsCount }}</span>
         {{'Cart' | translate}}
+      </div>
+      <div>
+        <span class="lang-button" (click)="useLanguage('en')">en</span>
+        <span class="lang-button" (click)="useLanguage('ee')">ee</span> 
       </div>
   </div>
 </div>

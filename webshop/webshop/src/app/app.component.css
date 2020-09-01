@@ -1,5 +1,13 @@
 .inside-sidebar {
-  margin-left: 200px;
+  
 }
 
+.page {
+  position: relative;
+  min-height: 100vh;
+}
 
+.content-page {
+  padding-bottom: 50px;
+  margin-left: 200px;
+}

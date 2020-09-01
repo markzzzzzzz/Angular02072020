@@ -3,8 +3,12 @@
   <img src="{{item.imgSrc}}"><br>
   <div>{{ 'Item price is:' }} {{ item.price }}</div>
   <br>
-  <button (click)="onAddToCart()">{{ 'Add to cart' }}</button>
+  <!-- <button (click)="onAddToCart()">{{ 'Add to cart' }}</button> -->
+  <div class="container">
+    <a (click)="onAddToCart()" class="btn">{{ 'Add to cart' }}</a>
+  </div>
 </div>
+
 
 
 <lib-toastify-toast-container 

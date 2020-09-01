@@ -28,13 +28,13 @@ export class ItemListComponent implements OnInit {
 
   onSortPriceAsc() {
     this.itemsShown = this.items.slice().sort(
-    // (item, itemNext) => item.price - itemNext.price
+    (item, itemNext) => itemNext.price - item.price
     );
   }
 
   onSortPriceDesc() {
     this.itemsShown = this.items.slice().sort(
-      // (item, itemNext) => item.price - itemNext.price
+       (item, itemNext) => item.price - itemNext.price
       );
   }
 
