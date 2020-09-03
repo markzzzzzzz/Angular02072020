@@ -1,12 +1,11 @@
 <div class="item-view">
-  <h3>{{'Item selected:'}} {{ item.title }}</h3><br>
-  <img src="{{item.imgSrc}}"><br>
-  <div>{{ 'Item price is:' }} {{ item.price }}</div>
-  <br>
-  <!-- <button (click)="onAddToCart()">{{ 'Add to cart' }}</button> -->
-  <div class="container">
-    <a (click)="onAddToCart()" class="btn">{{ 'Add to cart' }}</a>
+  <div class="item-header">
+    <img src="{{item.imgSrc}}"><br>
+    <div class="item-title">{{'Item selected:'}} {{ item.title }}</div><br>
   </div>
+  <div class="item-price">{{ 'Item price is:' }} {{ item.price }}</div>
+  <br>
+    <button (click)="onAddToCart()" class="main-button">{{ 'Add to cart' }}</button>
 </div>
 
 

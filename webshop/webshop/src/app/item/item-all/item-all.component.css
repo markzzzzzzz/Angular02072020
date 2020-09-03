@@ -6,8 +6,30 @@
   margin-top: 1%;
   border: 1px solid black;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .inactive {
   border: 1px solid red;
+}
+
+button {
+  cursor: pointer;
+}
+
+.shortened {
+  font-size: 0.8em;
+  padding: 6px;
+}
+
+@media (max-width: 1000px) {
+  .item {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .item {
+    width: 50%;
+  }
 }

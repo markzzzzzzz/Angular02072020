@@ -8,13 +8,15 @@
   </mat-select>
 </mat-form-field>
 
-<button (click)="onSendToDb()">Send all items to Database</button>
+<br>
+<button class="main-button" (click)="onSendToDb()">Send all items to Database</button>
 
 <div class="adminitems-list">
   <div *ngFor="let item of items | categoryFilter: selectedCategory; let i = index"
   class="item" [class.inactive]="!item.visible" (click)="onInactive(i)">
   <p> {{ item.title }} </p>
   <p>  {{ item.price }} </p> 
-  <button [routerLink]='["/edit",i]'>{{'Edit' }}</button>
+  <button class="main-button shortened" [routerLink]='["/edit",i]'>{{'Edit' }}</button>
   </div>
 </div>
+

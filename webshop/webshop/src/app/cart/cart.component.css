@@ -38,3 +38,8 @@
   opacity: 1;
   transition: .5s;
 }
+
+  .cart-sum {
+  margin-left: 40%;
+  font-size: 1.4em
+}
